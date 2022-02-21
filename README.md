@@ -6,6 +6,9 @@ A [Flarum](http://flarum.org) extension. Add some user statistics in flarum post
 
 ![MNnifcN36a](https://user-images.githubusercontent.com/79002016/154916388-503f2d13-377c-4462-869b-0a36ef29ca34.gif)
 
+![111111](https://user-images.githubusercontent.com/79002016/154973427-7e1dbbfb-43a4-4d4e-a6a1-e9cc55d47950.png)
+
+
 
 ## Usage
 Remember to set the permission to "All" for clarkwinkelmann/flarum-ext-likes-received to make it works for guests.
