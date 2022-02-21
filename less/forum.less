@@ -44,3 +44,59 @@ i.fas.fa-thumbs-up.userstats {
   margin-right: 5px;
   color: deepskyblue;
 }
+img.like-badge {
+  width: 40px;
+}
+
+li.item-topLikeReceived {
+  position: absolute;
+  left: 31px;
+  top: 90px;
+}
+
+@media (max-width: 767px) {
+  li.item-topLikeReceived {
+    .Badge-like {
+      display: none;
+    }
+  }
+}
+
+.Badge-like {
+  align-items: center;
+  background: #0088bb;
+  border: 1.2px solid #fff;
+  border-radius: 20em;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  font-size: 0.77em;
+  font-weight: 400;
+  height: 1.8em;
+  justify-content: center;
+  line-height: 1;
+  min-width: 70px;
+  width: 100%;
+  position: absolute;
+  top: -16px;
+  left: -14px;
+}
+.Badge-like.ten {
+  background: #157700;
+}
+.Badge-like.fifthy {
+  background: #593486;
+}
+.Badge-like.hundred {
+  background: #ff6a04;
+}
+.Badge-like.twohundred {
+  background: #00776a;
+}
+.Badge-like.threehundred {
+  background: #fc0000;
+}
+.Badge-like.fivehundred {
+  background: #c200ff;
+}

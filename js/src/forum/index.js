@@ -1,8 +1,60 @@
 import app from 'flarum/forum/app';
-import { extend } from 'flarum/common/extend';
+import {extend} from 'flarum/common/extend';
 import CommentPost from 'flarum/forum/components/CommentPost';
 
 app.initializers.add('justoverclock/user-statistics', () => {
+  extend(CommentPost.prototype, 'headerItems', function (items) {
+
+    const user = this.attrs.post.user();
+    const likeReceived = user.data.attributes.likesReceived;
+
+    if (likeReceived === 3) {
+      items.add(
+        'topLikeReceived',
+        <div className="Badge-like ten">10 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+      )
+    }
+
+    if (likeReceived === 50) {
+      items.add(
+        'topLikeReceived',
+        <div className="Badge-like fifthy">50 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+      )
+    }
+
+    if (likeReceived === 100) {
+      items.add(
+        'topLikeReceived',
+        <div
+          className="Badge-like hundred">100 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+      )
+    }
+
+    if (likeReceived === 200) {
+      items.add(
+        'topLikeReceived',
+        <div
+          className="Badge-like twohundred">200 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+      )
+    }
+
+    if (likeReceived === 300) {
+      items.add(
+        'topLikeReceived',
+        <div
+          className="Badge-like threehundred">300 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+      )
+    }
+
+    if (likeReceived === 500) {
+      items.add(
+        'topLikeReceived',
+        <div
+          className="Badge-like fivehundred">500 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+      )
+    }
+
+  })
   extend(CommentPost.prototype, 'footerItems', function (items) {
     const user = this.attrs.post.user();
     const joinTime = user.joinTime().toString().split(' ').slice(1, 4).join(' ');
@@ -15,19 +67,23 @@ app.initializers.add('justoverclock/user-statistics', () => {
       <div className="user-stats">
         <ul>
           <li>
-            <i className="far fa-clock userstats" title={app.translator.trans('justoverclock-user-statistics.forum.joinTime')} />
+            <i className="far fa-clock userstats"
+               title={app.translator.trans('justoverclock-user-statistics.forum.joinTime')}/>
             {joinTime}
           </li>
           <li>
-            <i className="far fa-comment-dots userstats" title={app.translator.trans('justoverclock-user-statistics.forum.totalDiscussions')} />
+            <i className="far fa-comment-dots userstats"
+               title={app.translator.trans('justoverclock-user-statistics.forum.totalDiscussions')}/>
             {totalDiscussions}
           </li>
           <li>
-            <i className="fas fa-pen-nib userstats" title={app.translator.trans('justoverclock-user-statistics.forum.totalPosts')} />
+            <i className="fas fa-pen-nib userstats"
+               title={app.translator.trans('justoverclock-user-statistics.forum.totalPosts')}/>
             {totalPosts}
           </li>
           <li>
-            <i className="fas fa-thumbs-up userstats" title={app.translator.trans('justoverclock-user-statistics.forum.likeReceived')} />
+            <i className="fas fa-thumbs-up userstats"
+               title={app.translator.trans('justoverclock-user-statistics.forum.likeReceived')}/>
             {likeReceived}
           </li>
         </ul>
