@@ -46,7 +46,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       )
     }
 
-    if (likeReceived === 500) {
+    if (likeReceived >= 500) {
       items.add(
         'topLikeReceived',
         <div
