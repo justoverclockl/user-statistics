@@ -22,12 +22,10 @@ composer require justoverclock/user-statistics:"*"
 
 ```sh
 composer update justoverclock/user-statistics:"*"
-php flarum migrate
 php flarum cache:clear
 ```
 
 ## Links
 
 - [Packagist](https://packagist.org/packages/justoverclock/user-statistics)
-- [GitHub](https://github.com/justoverclock/user-statistics)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [GitHub](https://github.com/justoverclockl/user-statistics)
