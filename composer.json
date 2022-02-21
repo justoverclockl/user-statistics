@@ -1,0 +1,51 @@
+{
+    "name": "justoverclock/user-statistics",
+    "description": "Add some user statistics in flarum posts footer",
+    "keywords": [
+        "statistics",
+        "user statistics",
+        "user info"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0",
+        "clarkwinkelmann/flarum-ext-likes-received": "*"
+    },
+    "authors": [
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "User Statistics",
+            "category": "",
+            "icon": {
+                "name": "fas fa-chart-bar",
+                "color": "purple",
+                "backgroundColor": "white"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": true,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}
