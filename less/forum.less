@@ -1,11 +1,5 @@
 
-.user-stats > ul {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  margin-left: -40px;
-  display: none;
-}
+
 .user-stats>ul>li {
   margin-right: 1rem;
   padding: 3px;
@@ -31,15 +25,26 @@ i.fas.fa-pen-nib.userstats {
   margin-right: 5px;
   color: cornflowerblue;
 }
-
+.CommentPost.Post {
+  .user-stats > ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-left: -40px;
+    opacity: 0;
+    transition: 0.3s;
+  }
+}
 .CommentPost.Post:hover {
   .user-stats > ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     margin-left: -40px;
+    opacity: 1;
   }
 }
+
 i.fas.fa-thumbs-up.userstats {
   margin-right: 5px;
   color: deepskyblue;
