@@ -4,6 +4,9 @@
 
 A [Flarum](http://flarum.org) extension. Add some user statistics in flarum posts, this extension require `clarkwinkelmann/flarum-ext-likes-received` and will be installed automatically.
 
+![MNnifcN36a](https://user-images.githubusercontent.com/79002016/154916388-503f2d13-377c-4462-869b-0a36ef29ca34.gif)
+
+
 ## Usage
 Remember to set the permission to "All" for clarkwinkelmann/flarum-ext-likes-received to make it works for guests.
 
