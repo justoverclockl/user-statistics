@@ -11,14 +11,14 @@ app.initializers.add('justoverclock/user-statistics', () => {
     if (likeReceived >= 10 && likeReceived <= 49) {
       items.add(
         'topLikeReceived',
-        <div className="Badge-like ten">10 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+        <div className="Badge-like ten">10+ {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
     if (likeReceived >= 50 && likeReceived <= 99) {
       items.add(
         'topLikeReceived',
-        <div className="Badge-like fifthy">50 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+        <div className="Badge-like fifthy">50+ {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
@@ -26,7 +26,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       items.add(
         'topLikeReceived',
         <div
-          className="Badge-like hundred">100 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+          className="Badge-like hundred">100+ {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
@@ -34,7 +34,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       items.add(
         'topLikeReceived',
         <div
-          className="Badge-like twohundred">200 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+          className="Badge-like twohundred">200+ {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
@@ -42,7 +42,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       items.add(
         'topLikeReceived',
         <div
-          className="Badge-like threehundred">300 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+          className="Badge-like threehundred">300+ {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
@@ -50,7 +50,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       items.add(
         'topLikeReceived',
         <div
-          className="Badge-like fivehundred">500 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
+          className="Badge-like fivehundred">500+ {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
