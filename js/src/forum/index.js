@@ -8,21 +8,21 @@ app.initializers.add('justoverclock/user-statistics', () => {
     const user = this.attrs.post.user();
     const likeReceived = user.data.attributes.likesReceived;
 
-    if (likeReceived === 10) {
+    if (likeReceived >= 10 && likeReceived <= 49) {
       items.add(
         'topLikeReceived',
         <div className="Badge-like ten">10 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
-    if (likeReceived === 50) {
+    if (likeReceived >= 50 && likeReceived <= 99) {
       items.add(
         'topLikeReceived',
         <div className="Badge-like fifthy">50 {app.translator.trans('justoverclock-user-statistics.forum.likes')}</div>
       )
     }
 
-    if (likeReceived === 100) {
+    if (likeReceived >= 100 && likeReceived <= 199) {
       items.add(
         'topLikeReceived',
         <div
@@ -30,7 +30,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       )
     }
 
-    if (likeReceived === 200) {
+    if (likeReceived >= 200 && likeReceived <= 299) {
       items.add(
         'topLikeReceived',
         <div
@@ -38,7 +38,7 @@ app.initializers.add('justoverclock/user-statistics', () => {
       )
     }
 
-    if (likeReceived === 300) {
+    if (likeReceived >= 300 && likeReceived <= 499) {
       items.add(
         'topLikeReceived',
         <div
