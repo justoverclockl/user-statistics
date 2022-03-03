@@ -59,14 +59,15 @@ app.initializers.add('justoverclock/user-statistics', () => {
       }
   })
   extend(CommentPost.prototype, 'view', function (vnode) {
-    const post = this.attrs.post.isHidden();
+    const post = this.attrs.post;
     const user = this.attrs.post.user();
     const joinTime = user.joinTime().toString().split(' ').slice(1, 4).join(' ');
     const totalDiscussions = user.discussionCount();
     const totalPosts = user.commentCount();
     const likeReceived = user.data.attributes.likesReceived;
 
-    if (post === false) {
+    if (post.isHidden()) return;
+
       vnode.children.push(
         <div className="user-stats">
           <ul>
@@ -93,6 +94,5 @@ app.initializers.add('justoverclock/user-statistics', () => {
           </ul>
         </div>
       );
-    }
   });
 });
