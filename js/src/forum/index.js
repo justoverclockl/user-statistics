@@ -58,8 +58,8 @@ app.initializers.add('justoverclock/user-statistics', () => {
       const joinTime = user.joinTime().toString().split(' ').slice(1, 4).join(' ');
       const totalDiscussions = user.discussionCount();
       const totalPosts = user.commentCount();
-
       const likeReceived = user.data.attributes.likesReceived;
+      const totalBestAnswer = user.data.attributes.bestAnswerCount
 
       if (post.isHidden()) return;
 
@@ -81,6 +81,10 @@ app.initializers.add('justoverclock/user-statistics', () => {
             <li>
               <i className="fas fa-thumbs-up userstats" title={app.translator.trans('justoverclock-user-statistics.forum.likeReceived')} />
               {likeReceived}
+            </li>
+            <li>
+              <i className="fas fa-check-circle userstats" title={app.translator.trans('justoverclock-user-statistics.forum.totalBestAnswer')} />
+              {totalBestAnswer}
             </li>
           </ul>
         </div>
